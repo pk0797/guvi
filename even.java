@@ -12,7 +12,7 @@ int r;
 System.out.print("Enter number  ");
 
 r = c.nextInt();
-if(r<=0 || r<10000){
+if(r<=0 || r>10000){
 System.out.print("invalid");
 	
 }
