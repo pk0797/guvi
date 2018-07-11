@@ -1,39 +1,48 @@
-
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-class ideone
+/* Name of the class has to be "Main" only if the class is public. */
+class Ideone
 {
-
- public static void main (String[] args) throws java.lang.Exception
- {
-  int i[]={7,9,8,6,1,4,7,6};
-   int k=3;
-               int j=0,sum1=0,sum2=0;
-   for(int h=0;h<=(8-j+1);h++){
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	Scanner s=new Scanner(System.in);
+	int count=1,y=s.nextInt();
+	 List q = new ArrayList();
+	while(y>0){
+		count++;
+		q.add(y%10);
+		y=y/10;
+		
+	}
+	 int k=s.nextInt();
+               int j=count-k-1,sum1=0,sum2=0;
+   for(int h=count-j+1;h>=0;h--){
                        sum1=0;
-     j=0;
+     j=count-k-1;
+
      try{
-     while(j<k){
-       sum1=sum1*10+i[h+j];
-     
-       j++;
+     while((j-1)>=0){
+       sum1=sum1*10+(int)q.get(h+j);
+       j--;
+       System.out.println(sum1);
      }
      }
      catch(Exception e){
-     break;
+      //System.out.println(""+e);
      }
 
      if(sum2==0){
        sum2=sum1;
      }
+     
      if(sum1<sum2){
        sum2=sum1;
      }
    
    }
 
-   System.out.printf(""+sum2);
+   System.out.printf("--->"+sum2);
  }
-}
+	}
