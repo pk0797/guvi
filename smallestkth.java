@@ -1,8 +1,8 @@
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-/* Name of the class has to be "Main" only if the class is public. */
 class Ideone
 {
 	public static void main (String[] args) throws java.lang.Exception
@@ -16,17 +16,17 @@ class Ideone
 		y=y/10;
 		
 	}
-	 int k=s.nextInt();
-               int j=count-k-1,sum1=0,sum2=0;
+	 int p=s.nextInt();
+	 int tv=q.size();
+	 int k=tv-p;
+               int j=k,sum1=0,sum2=0;
    for(int h=count-j+1;h>=0;h--){
                        sum1=0;
-     j=count-k-1;
-
+     j=k-1;
      try{
-     while((j-1)>=0){
+     while(j>=0){
        sum1=sum1*10+(int)q.get(h+j);
        j--;
-       System.out.println(sum1);
      }
      }
      catch(Exception e){
@@ -43,6 +43,6 @@ class Ideone
    
    }
 
-   System.out.printf("--->"+sum2);
+   System.out.printf(""+sum2);
  }
 	}
